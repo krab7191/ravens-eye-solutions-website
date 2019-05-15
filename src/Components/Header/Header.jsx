@@ -23,13 +23,13 @@ const styles = {
 		flexGrow: 1,
 	},
 	menuButton: {
-		marginLeft: -12,
-		marginRight: 20,
+		marginRight: 15,
 	},
 	icon: {
 		height: "35px",
 		width: "auto",
-		marginRight: "15px"
+		marginRight: "15px",
+		borderRadius: "50%"
 	}
 };
 
