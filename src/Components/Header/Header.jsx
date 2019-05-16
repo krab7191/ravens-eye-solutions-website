@@ -53,7 +53,7 @@ class Header extends Component {
 		const open = Boolean(anchorEl);
 
 		return (
-			<div className={classes.root} >
+			<div className={`${classes.root} header`} >
 				<AppBar>
 					<Toolbar>
 						<img src="./assets/images/RES-icon-crop.png" alt="Raven's eye logo" className={`${classes.icon} logo`} />
