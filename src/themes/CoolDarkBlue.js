@@ -10,6 +10,10 @@ export default createMuiTheme({
 	palette,
 	themeName,
 	typography: {
-		useNextVariants: true
+		useNextVariants: true,
+		fontFamily: [
+			'Caveat',
+			'cursive'
+		].join(',')
 	},
 });

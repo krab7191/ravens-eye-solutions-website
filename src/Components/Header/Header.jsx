@@ -14,6 +14,8 @@ import Icon from '@material-ui/core/Icon';
 import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
 
+import './Header.css';
+
 // Component specific styles
 const styles = {
 	root: {
@@ -28,8 +30,7 @@ const styles = {
 	icon: {
 		height: "35px",
 		width: "auto",
-		marginRight: "15px",
-		borderRadius: "50%"
+		marginRight: "15px"
 	}
 };
 
@@ -53,11 +54,10 @@ class Header extends Component {
 
 		return (
 			<div className={classes.root} >
-
 				<AppBar>
 					<Toolbar>
-						<img src="./assets/images/raven's-eye.png" alt="Raven's eye logo" className={classes.icon} />
-						<Typography variant="h6" color="inherit" className={classes.grow}>
+						<img src="./assets/images/RES-icon-crop.png" alt="Raven's eye logo" className={`${classes.icon} logo`} />
+						<Typography variant="h4" color="inherit" className={classes.grow}>
 							Raven's Eye Solutions
           	</Typography>
 						<IconButton
