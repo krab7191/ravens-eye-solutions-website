@@ -57,7 +57,7 @@ class Header extends Component {
 				<AppBar>
 					<Toolbar>
 						<img src="./assets/images/RES-icon-crop.png" alt="Raven's eye logo" className={`${classes.icon} logo`} />
-						<Typography variant="h4" color="inherit" className={classes.grow}>
+						<Typography variant="h5" color="inherit" className={`${classes.grow} brand`}>
 							Raven's Eye Solutions
           	</Typography>
 						<IconButton

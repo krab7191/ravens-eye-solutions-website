@@ -1,5 +1,11 @@
-
 img.logo {
-		border-radius: 48%;
-		box-shadow: 2px 2px 2px 3px #011a4a;
+	border-radius: 46%;
+	box-shadow: 0 0 10px 2px #011a4a;
+	position: relative;
+	border: .4vmin solid white;
+	animation: App-logo-spin infinite 20s linear;
+}
+
+header h5.brand {
+	font-size: calc(10px + 6vmin);
 }

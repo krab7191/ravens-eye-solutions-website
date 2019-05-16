@@ -11,8 +11,8 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "build:css": "postcss src/**/*.css -o src/**/*.css --verbose -m",
-    "watch:css": "postcss src/**/*.css -o src/**/*.css -w --verbose -m",
+    "build:css": "postcss src/**/*.css -r --verbose",
+    "watch:css": "postcss src/**/*.css -r --verbose",
     "start": "npm-run-all -p watch:css start-js",
     "start-js": "react-scripts start",
     "build": "npm-run-all build:css build-js",
