@@ -13,6 +13,7 @@ import Menu from '@material-ui/core/Menu';
 import Icon from '@material-ui/core/Icon';
 import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 
 import './Header.css';
 
@@ -60,7 +61,17 @@ class Header extends Component {
 						<Typography variant="h5" color="inherit" className={`${classes.grow} brand`}>
 							Raven's Eye Solutions
           	</Typography>
+						<Button
+							color="inherit"
+							className="navigation-link"
+						>About</Button>
+						<Button
+							color="inherit"
+							variant="outlined"
+							className="navigation-link"
+						>Get In Touch</Button>
 						<IconButton
+							className="hamburger"
 							aria-owns='menu-appbar'
 							aria-haspopup="true"
 							onClick={this.handleMenu}
@@ -70,6 +81,7 @@ class Header extends Component {
 							</Icon>
 						</IconButton>
 						<Menu
+							className="hamburger"
 							id="menu-appbar"
 							anchorEl={anchorEl}
 							anchorOrigin={{
