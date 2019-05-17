@@ -1,35 +1,28 @@
-div.parallax-wrapper {
-	width: 100vw;
-	height: 100vh;
-	padding-top: 20vh;
-	box-sizing: border-box;
-	transform-style: preserve-3d;
-}
-
-.regular-wrapper {
-	z-index: 2;
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	padding-top: 20vh;
-	background-image: url("../../images/beverage-background.jpg");
-}
-
-div.parallax-wrapper::before {
-	content: "";
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background-image: url("../../images/beverage-background.jpg");
-	position: absolute;
+div.parallax-container {
+	opacity: 90%;
+	height: 640px;
+	background: url(../../images/beverage-background.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: rgba(1, 26, 74, 0.85);
+	background-blend-mode: overlay;
 	z-index: -1;
-	transform: translateZ(-1px) scale(2);
 }
 
-div.parallax-content, div.normal-content {
+h2.parallax-text {
+	color: whitesmoke;
 	margin: 0 auto;
-	padding: 50px;
-	width: 50%;
-	background: #aaa;
+	width: 65%;
+	padding: 15px;
+	padding-top: 94px;
+	z-index: 100;
 }
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+
+/* 
+@media only screen and (max-device-width: 860px) {
+	div.parallax-container {
+		background-attachment: scroll;
+	}
+} */
