@@ -20,9 +20,8 @@ h2.parallax-text {
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 
-/* 
 @media only screen and (max-device-width: 860px) {
 	div.parallax-container {
 		background-attachment: scroll;
 	}
-} */
+}

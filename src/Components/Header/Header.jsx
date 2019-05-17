@@ -58,24 +58,24 @@ class Header extends Component {
 				<AppBar>
 					<Toolbar>
 						<img src="./assets/images/RES-icon-crop.png" alt="Raven's eye logo" className={`${classes.icon} logo`} />
-						<Typography variant="h5" color="inherit" className={`${classes.grow} brand`}>
+						<Typography variant="h5" color="textPrimary" className={`${classes.grow} brand`}>
 							Raven's Eye Solutions
           	</Typography>
 						<Button
-							color="inherit"
+							color="default"
 							className="navigation-link"
-						>About</Button>
+						>ABOUT</Button>
 						<Button
-							color="inherit"
+							color="default"
 							variant="outlined"
 							className="navigation-link"
-						>Get In Touch</Button>
+						>CONTACT</Button>
 						<IconButton
 							className="hamburger"
 							aria-owns='menu-appbar'
 							aria-haspopup="true"
 							onClick={this.handleMenu}
-							color="inherit">
+							color="default">
 							<Icon>
 								menu
 							</Icon>
@@ -95,8 +95,8 @@ class Header extends Component {
 							open={open}
 							onClose={this.handleClose}
 						>
-							<MenuItem onClick={this.handleClose}>About</MenuItem>
-							<MenuItem onClick={this.handleClose}>Get In Touch</MenuItem>
+							<MenuItem onClick={this.handleClose}>ABOUT</MenuItem>
+							<MenuItem onClick={this.handleClose}>CONTACT</MenuItem>
 						</Menu>
 					</Toolbar>
 				</AppBar>
