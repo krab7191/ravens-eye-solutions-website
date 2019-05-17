@@ -1,0 +1,35 @@
+div.parallax-wrapper {
+	width: 100vw;
+	height: 100vh;
+	padding-top: 20vh;
+	box-sizing: border-box;
+	transform-style: preserve-3d;
+}
+
+.regular-wrapper {
+	z-index: 2;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 20vh;
+	background-image: url("../../images/beverage-background.jpg");
+}
+
+div.parallax-wrapper::before {
+	content: "";
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-image: url("../../images/beverage-background.jpg");
+	position: absolute;
+	z-index: -1;
+	transform: translateZ(-1px) scale(2);
+}
+
+div.parallax-content, div.normal-content {
+	margin: 0 auto;
+	padding: 50px;
+	width: 50%;
+	background: #aaa;
+}
