@@ -1,6 +1,5 @@
 // React imports
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 // Dependency imports
 import Typography from '@material-ui/core/Typography';
@@ -39,9 +38,5 @@ class ParallaxImageSection extends Component {
 		);
 	}
 }
-
-ParallaxImageSection.propTypes = {
-	classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(ParallaxImageSection);

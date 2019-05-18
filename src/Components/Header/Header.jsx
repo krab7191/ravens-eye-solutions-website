@@ -1,6 +1,5 @@
 // React imports
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 // Dependency imports ==>
 
@@ -105,9 +104,5 @@ class Header extends Component {
 	}
 
 }
-
-Header.propTypes = {
-	classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(Header);
