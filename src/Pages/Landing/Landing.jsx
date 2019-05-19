@@ -3,7 +3,7 @@ import React from 'react';
 
 // Component imports 
 import Header from '../../Components/Header';
-import ParallaxImageSection from '../../Components/ParallaxImageSection';
+import ParallaxSection from '../../Components/ParallaxSection';
 
 // Page theming
 import themes from '../../themes';
@@ -13,7 +13,7 @@ const Landing = () => {
 	return (
 		<MuiThemeProvider theme={themes.CoolDarkBlue}>
 			<Header />
-			<ParallaxImageSection />
+			<ParallaxSection height="calc(250px + 30vw)" />
 		</MuiThemeProvider>
 	);
 };

@@ -1,0 +1,39 @@
+div.parallax-container {
+	width: 100vw;
+	background: url(../../images/beverage-background.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: rgb(36, 36, 36, 1.0);
+	background-blend-mode: overlay;
+	z-index: -1;
+}
+
+.parallax-text {
+	width: 65vw;
+}
+
+h2.parallax-text {
+	padding: 15px;
+	padding-top: 94px;
+	font-size: calc(10px + 6vw);
+}
+
+h3.parallax-text {
+	margin: 20px;
+	padding: 20px;
+	font-size: calc(10px + 4vw);
+}
+
+@media only screen and (max-width: 560px) {
+	.parallax-text {
+		width: 90vw;
+	}
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+
+@media only screen and (max-device-width: 768px) {
+	div.parallax-container {
+		background-attachment: scroll;
+	}
+}

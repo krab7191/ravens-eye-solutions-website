@@ -6,7 +6,13 @@ img.logo {
 }
 
 header h5.brand {
-	font-size: calc(10px + 6vmin);
+	font-size: calc(10px + 6vw);
+}
+
+@media only screen and (min-width: 640px) {
+	header h5.brand {
+		font-size: 3rem;
+	}
 }
 
 div.header header {
@@ -19,7 +25,7 @@ button.navigation-link {
 
 /* Smallest width before text collision */
 
-@media only screen and (min-width: 524px) {
+@media only screen and (min-width: 560px) {
 	button.hamburger {
 		display: none;
 	}
