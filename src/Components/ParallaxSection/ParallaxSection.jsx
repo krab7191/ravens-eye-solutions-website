@@ -11,7 +11,7 @@ import './ParallaxSection.css';
 
 const styles = theme => ({
 	button: {
-		color: '#fff'
+		color: theme.default
 	}
 });
 
@@ -20,13 +20,14 @@ class ParallaxImageSection extends Component {
 	render() {
 		// For Mat-UI props
 		const { classes } = this.props;
+		// Other React props
 		const { height } = this.props;
 
 		return (
 			<>
 				<div className='parallax-container'
 					align="center"
-					style={{ height: height || '640px' }}>
+					style={{ height: height || '480px' }}>
 					<Typography
 						variant="h2"
 						align="center"

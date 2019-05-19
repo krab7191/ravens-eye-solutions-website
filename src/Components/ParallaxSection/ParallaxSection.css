@@ -1,6 +1,8 @@
 div.parallax-container {
-	width: 100vw;
-	background: url(../../images/beverage-background.jpg) no-repeat center center fixed;
+	width: calc(100vw - 15px);
+	background: url(../../images/beverage-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: rgb(36, 36, 36, 1.0);
@@ -13,14 +15,13 @@ div.parallax-container {
 }
 
 h2.parallax-text {
-	padding: 15px;
 	padding-top: 94px;
 	font-size: calc(10px + 6vw);
 }
 
 h3.parallax-text {
-	margin: 20px;
-	padding: 20px;
+	margin: 20px 0;
+	/* padding: 20px; */
 	font-size: calc(10px + 4vw);
 }
 
