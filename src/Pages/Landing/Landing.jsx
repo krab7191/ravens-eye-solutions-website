@@ -4,6 +4,7 @@ import React from 'react';
 // Component imports 
 import Header from '../../Components/Header';
 import ParallaxSection from '../../Components/ParallaxSection';
+import SlantedTextSection from '../../Components/SlantedTextSection';
 
 // Page theming
 import themes from '../../themes';
@@ -20,6 +21,7 @@ const Landing = () => {
 				height="calc(250px + 30vw)"
 				media={bgImage}
 			/>
+			<SlantedTextSection />
 		</MuiThemeProvider>
 	);
 };
