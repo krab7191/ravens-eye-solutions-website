@@ -15,19 +15,22 @@ const styles = theme => ({
 	}
 });
 
-class ParallaxImageSection extends Component {
+class ParallaxSection extends Component {
 
 	render() {
 		// For Mat-UI props
 		const { classes } = this.props;
 		// Other React props
-		const { height } = this.props;
+		const { height, media } = this.props;
 
 		return (
 			<>
 				<div className='parallax-container'
 					align="center"
-					style={{ height: height || '480px' }}>
+					style={{
+						height: height || '480px',
+						backgroundImage: `url(${media})`
+					}}>
 					<Typography
 						variant="h2"
 						align="center"
@@ -51,4 +54,4 @@ class ParallaxImageSection extends Component {
 	}
 }
 
-export default withStyles(styles)(ParallaxImageSection);
+export default withStyles(styles)(ParallaxSection);

@@ -1,6 +1,5 @@
 div.parallax-container {
 	width: 100%;
-	background: url(../../images/beverage-background.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -15,7 +14,8 @@ div.parallax-container {
 }
 
 h2.parallax-text {
-	padding-top: 94px;
+	padding-top: 85px;
+	padding-bottom: 20px;
 	font-size: calc(10px + 6vw);
 }
 

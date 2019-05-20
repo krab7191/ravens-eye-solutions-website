@@ -9,6 +9,8 @@ header h5.brand {
 	font-size: calc(10px + 6vw);
 }
 
+/* Keep brand fixed after going above 640 px */
+
 @media only screen and (min-width: 640px) {
 	header h5.brand {
 		font-size: 3rem;
@@ -31,5 +33,13 @@ button.navigation-link {
 	}
 	button.navigation-link {
 		display: block;
+	}
+}
+
+/* small screens */
+
+@media only screen and (max-width: 370px) {
+	header h5.brand {
+		font-size: calc(10px + 3.9vw);
 	}
 }
