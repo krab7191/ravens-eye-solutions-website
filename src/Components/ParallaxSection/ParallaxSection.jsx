@@ -11,7 +11,7 @@ import './ParallaxSection.css';
 
 const styles = theme => ({
 	button: {
-		color: theme.default
+		color: theme.palette.text.primary
 	}
 });
 

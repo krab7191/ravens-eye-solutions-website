@@ -2,7 +2,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 const palette = {
 	primary: { main: '#4aaef5' },
-	type: "dark"
+	type: 'dark'
 };
 const themeName = 'Cool Dark Blue';
 

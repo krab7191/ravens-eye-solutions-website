@@ -1,5 +1,5 @@
 div.parallax-container {
-	width: calc(100vw - 15px);
+	width: 100%;
 	background: url(../../images/beverage-background.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
