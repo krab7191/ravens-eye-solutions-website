@@ -96,7 +96,9 @@ class Header extends Component {
 							open={open}
 							onClose={this.handleClose}
 						>
+						<a href="#about-us">
 							<MenuItem onClick={this.handleClose}>ABOUT</MenuItem>
+							</a>
 							<MenuItem onClick={this.handleClose}>CONTACT</MenuItem>
 						</Menu>
 					</Toolbar>
