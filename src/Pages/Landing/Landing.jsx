@@ -30,8 +30,10 @@ const areas = ['Websites', 'Webapps', 'Custom Solutions'];
 
 const styles = theme => ({
 	sectionHead: {
-		fontSize: '1.8rem',
-		paddingBottom: '20px'
+		fontSize: '2rem',
+		paddingBottom: '20px',
+		width: '85%',
+		margin: '0 auto'
 	},
 	textSection: {
 		margin: '0 auto',
