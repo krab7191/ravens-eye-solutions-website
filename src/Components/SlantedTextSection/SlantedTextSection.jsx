@@ -18,6 +18,7 @@ const styles = theme => ({
 	container: {
 		width: '100%',
 		backgroundColor: theme.palette.background.default,
+		margin: '0 auto',
 		textAlign: 'center'
 	},
 	sectionHead: {
