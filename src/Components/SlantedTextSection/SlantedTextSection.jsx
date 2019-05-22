@@ -73,13 +73,14 @@ const SlantedTextSection = props => {
 							variant='body2'>
 							Websites
 						</Typography>
-						<Typography
-							className={classes.textSection}
-							variant='body2'>
-							{websiteTech.map(t => (
-								<p className={classes.p}>{t}</p>
-							))}
-						</Typography>
+						{websiteTech.map((t, i) => (
+							<Typography
+								className={classes.textSection}
+								variant='body2'
+								key={i}>
+								{t}
+							</Typography>
+						))}
 					</Grid>
 					<Grid item xs={8} sm={4}>
 						<Typography
@@ -93,13 +94,14 @@ const SlantedTextSection = props => {
 							variant='body2'>
 							Web Apps
 						</Typography>
-						<Typography
-							className={classes.textSection}
-							variant='body2'>
-							{webappTech.map(t => (
-								<p className={classes.p}>{t}</p>
-							))}
-						</Typography>
+						{webappTech.map((t, i) => (
+							<Typography
+								className={classes.textSection}
+								variant='body2'
+								key={i}>
+								{t}
+							</Typography>
+						))}
 					</Grid>
 					<Grid item xs={8} sm={4}>
 						<Typography
@@ -113,13 +115,14 @@ const SlantedTextSection = props => {
 							variant='body2'>
 							Custom Solutions
 						</Typography>
-						<Typography
-							className={classes.textSection}
-							variant='body2'>
-							{customTech.map(t => (
-								<p className={classes.p}>{t}</p>
-							))}
-						</Typography>
+						{customTech.map((t, i) => (
+							<Typography
+								className={classes.textSection}
+								variant='body2'
+								key={i}>
+								{t}
+							</Typography>
+						))}
 					</Grid>
 				</Grid>
 			</div >
