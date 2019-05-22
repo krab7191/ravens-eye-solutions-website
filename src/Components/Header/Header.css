@@ -43,3 +43,7 @@ button.navigation-link {
 		font-size: calc(10px + 3.9vw);
 	}
 }
+
+a {
+	text-decoration: none;
+}

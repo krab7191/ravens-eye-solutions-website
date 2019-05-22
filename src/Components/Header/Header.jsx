@@ -60,10 +60,12 @@ class Header extends Component {
 						<Typography variant="h5" color="textPrimary" className={`${classes.grow} brand`}>
 							Raven's Eye Solutions
           	</Typography>
-						<Button
-							color="default"
-							className="navigation-link"
-						>ABOUT</Button>
+						<a href="#about-us">
+							<Button
+								color="default"
+								className="navigation-link"
+							>ABOUT</Button>
+						</a>
 						<Button
 							color="default"
 							variant="outlined"
