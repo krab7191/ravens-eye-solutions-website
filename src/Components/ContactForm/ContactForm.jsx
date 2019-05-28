@@ -5,8 +5,8 @@ import React from 'react';
 
 // Material UI imports
 import { makeStyles } from '@material-ui/core/styles';
-// import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 // Style imports
 import './ContactForm.css';
@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
 		marginLeft: theme.spacing(2),
 		marginRight: theme.spacing(2),
 		color: theme.palette.text.secondary
+	},
+	button: {
+		margin: theme.spacing(2)
 	}
 }));
 
@@ -67,6 +70,9 @@ const ContactForm = () => {
 				margin="normal"
 				variant="outlined"
 			/>
+			<Button variant="contained" className={classes.button} type="submit">
+				Send
+			</Button>
 		</form>
 	);
 };
