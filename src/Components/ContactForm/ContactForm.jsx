@@ -6,7 +6,6 @@ import React from 'react';
 // Material UI imports
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 
 // Style imports
@@ -15,7 +14,7 @@ import './ContactForm.css';
 const useStyles = makeStyles(theme => ({
 	container: {
 		display: 'flex',
-		flexWrap: 'wrap',
+		flexDirection: 'column',
 		backgroundColor: theme.palette.primary.main,
 		justifyContent: 'center',
 		padding: '30px'
@@ -26,7 +25,8 @@ const useStyles = makeStyles(theme => ({
 		color: theme.palette.text.secondary
 	},
 	button: {
-		margin: theme.spacing(2)
+		margin: '10px auto',
+		width: '100px'
 	}
 }));
 
@@ -46,7 +46,6 @@ const ContactForm = () => {
 		>
 			<TextField
 				required
-				id="outlined-required"
 				label="Name"
 				defaultValue=""
 				className={classes.textField}
@@ -56,7 +55,6 @@ const ContactForm = () => {
 			/>
 			<TextField
 				required
-				id="outlined-required"
 				label="Email Address"
 				defaultValue=""
 				className={classes.textField}
@@ -64,14 +62,12 @@ const ContactForm = () => {
 				variant="outlined"
 				autoComplete="email"
 			/>
-			<Input
+			<TextField
 				required
-				id="outlined-required"
-				placeholder="How can we help you?"
+				label="How can we help you?"
 				className={classes.textField}
-				margin="dense"
+				margin="normal"
 				variant="outlined"
-				multiline={true}
 			/>
 			<div data-netlify-recaptcha="true"></div>
 			<Button variant="contained" className={classes.button} type="submit">
