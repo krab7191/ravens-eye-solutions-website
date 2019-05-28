@@ -38,11 +38,11 @@ const ContactForm = () => {
 		<form
 			className={classes.container}
 			noValidate
-			netlify="true"
 			data-netlify="true"
 			id='contact-form'
 			name="contact-form"
 			method="POST"
+			data-netlify-recaptcha="true"
 		>
 			<TextField
 				required
@@ -73,6 +73,7 @@ const ContactForm = () => {
 				variant="outlined"
 				multiline={true}
 			/>
+			<div data-netlify-recaptcha="true"></div>
 			<Button variant="contained" className={classes.button} type="submit">
 				Send
 			</Button>
