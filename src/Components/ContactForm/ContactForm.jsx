@@ -41,9 +41,8 @@ const ContactForm = () => {
 			netlify="true"
 			data-netlify="true"
 			id='contact-form'
-			name="contact-form" 
+			name="contact-form"
 			method="POST"
-			action="/success.html"
 		>
 			<TextField
 				required
