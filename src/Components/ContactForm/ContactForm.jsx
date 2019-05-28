@@ -41,7 +41,6 @@ const ContactForm = () => {
 			id='contact-form'
 			name="contact-form"
 			method="POST"
-			data-netlify-recaptcha="true"
 		>
 			<TextField
 				required
@@ -68,7 +67,7 @@ const ContactForm = () => {
 				margin="normal"
 				variant="outlined"
 			/>
-			<div data-netlify-recaptcha="true"></div>
+			<input type="hidden" name="form-name" value="contact-form" />
 			<Button variant="contained" className={classes.button} type="submit">
 				Send
 			</Button>
