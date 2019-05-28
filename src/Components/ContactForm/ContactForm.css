@@ -3,3 +3,7 @@
 	max-width: 400px;
 	margin: 10px auto;
 }
+
+#contact-form div.MuiFormControl-root label.MuiFormLabel-root {
+	color: white;
+}

@@ -21,8 +21,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	textField: {
 		marginLeft: theme.spacing(2),
-		marginRight: theme.spacing(2),
-		color: theme.palette.text.secondary
+		marginRight: theme.spacing(2)
 	},
 	button: {
 		margin: '10px auto',
