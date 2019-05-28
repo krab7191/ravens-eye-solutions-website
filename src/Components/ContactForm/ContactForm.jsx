@@ -37,7 +37,6 @@ const ContactForm = () => {
 		<form
 			className={classes.container}
 			noValidate
-			data-netlify="true"
 			id='contact-form'
 			name="contact-form"
 			method="POST"
@@ -50,6 +49,7 @@ const ContactForm = () => {
 				margin="normal"
 				variant="outlined"
 				autoComplete="name"
+				name="name"
 			/>
 			<TextField
 				required
@@ -59,6 +59,7 @@ const ContactForm = () => {
 				margin="normal"
 				variant="outlined"
 				autoComplete="email"
+				name="email"
 			/>
 			<TextField
 				required
@@ -66,6 +67,7 @@ const ContactForm = () => {
 				className={classes.textField}
 				margin="normal"
 				variant="outlined"
+				name="message"
 			/>
 			<input type="hidden" name="form-name" value="contact-form" />
 			<Button variant="contained" className={classes.button} type="submit">
