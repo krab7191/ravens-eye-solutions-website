@@ -66,11 +66,13 @@ class Header extends Component {
 								className="navigation-link"
 							>ABOUT</Button>
 						</a>
-						<Button
-							color="default"
-							variant="outlined"
-							className="navigation-link"
-						>CONTACT</Button>
+						<a href="#contact-form">
+							<Button
+								color="default"
+								variant="outlined"
+								className="navigation-link"
+							>CONTACT</Button>
+						</a>
 						<IconButton
 							className="hamburger"
 							aria-owns='menu-appbar'
@@ -96,10 +98,12 @@ class Header extends Component {
 							open={open}
 							onClose={this.handleClose}
 						>
-						<a href="#about-us">
-							<MenuItem onClick={this.handleClose}>ABOUT</MenuItem>
+							<a href="#about-us">
+								<MenuItem onClick={this.handleClose}>ABOUT</MenuItem>
 							</a>
-							<MenuItem onClick={this.handleClose}>CONTACT</MenuItem>
+							<a href='#contact-form'>
+								<MenuItem onClick={this.handleClose}>CONTACT</MenuItem>
+							</a>
 						</Menu>
 					</Toolbar>
 				</AppBar>

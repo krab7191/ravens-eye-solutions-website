@@ -1,7 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const palette = {
-	primary: { main: '#4aaef5' },
+	// primary: { main: '#4aaef5' },
+	primary: { main: '#1480c9' },
 	type: 'dark'
 };
 const themeName = 'Cool Dark Blue';
@@ -12,8 +13,8 @@ export default createMuiTheme({
 	typography: {
 		useNextVariants: true,
 		fontFamily: [
-			'Caveat',
-			'cursive'
+			'Merriweather',
+			'serif'
 		].join(',')
 	},
 });

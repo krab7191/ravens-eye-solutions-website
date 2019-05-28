@@ -1,11 +1,14 @@
 // React imports
 import React from 'react';
+
+// Dependency imports
 import classNames from 'classnames';
 
 // Component imports 
 import Header from '../../Components/Header';
 import ParallaxSection from '../../Components/ParallaxSection';
 import SlantedTextSection from '../../Components/SlantedTextSection';
+import ContactForm from '../../Components/ContactForm';
 
 // Page theming
 import themes from '../../themes';
@@ -22,8 +25,8 @@ const bgImage = require('../../media/beverage-background.jpg');
 
 const techSectionInfo = [
 	['React', 'Squarespace', 'Wordpress'],
-	['React', 'Node.js', 'Angular', 'REST APIs'],
-	['Pouracle', 'Data Collection', 'Craft Beer']
+	['React', 'Node.js', 'Angular'],
+	['Pouracle', 'Data Collection', 'REST APIs']
 ];
 const icons = ['computer', 'phone_android', 'wifi'];
 const areas = ['Websites', 'Webapps', 'Custom Solutions'];
@@ -33,13 +36,15 @@ const styles = theme => ({
 		fontSize: '2rem',
 		paddingBottom: '20px',
 		width: '85%',
-		margin: '0 auto'
+		margin: '0 auto',
+		color: theme.palette.primary.contrastText
 	},
 	textSection: {
 		margin: '0 auto',
 		width: '90%',
 		maxWidth: '640px',
-		fontSize: '1.5rem'
+		fontSize: '1.5rem',
+		color: theme.palette.primary.contrastText
 	},
 	bold: {
 		fontWeight: 'bold',
@@ -52,6 +57,10 @@ const styles = theme => ({
 	},
 	p: {
 		margin: '0'
+	},
+	contactForm: {
+		height: '800px',
+		marginBottom: '100px'
 	}
 });
 
@@ -77,7 +86,7 @@ const Landing = props => {
 				>
 					We create what you need to succeed:
 				</Typography>
-				<Grid container spacing={24} className={classes.grid}>
+				<Grid container spacing={8} className={classes.grid}>
 					{icons.map((icon, i) => (
 						<Grid item xs={12} sm={4} key={i}>
 							<Typography
@@ -111,7 +120,8 @@ const Landing = props => {
 			>
 				<Typography
 					className={classes.sectionHead}
-					variant='body2'>
+					variant='body2'
+					id="get-in-touch">
 					Get In Touch
 				</Typography>
 				<Typography
@@ -130,6 +140,7 @@ const Landing = props => {
 					3) We will build your future together
 				</Typography>
 			</SlantedTextSection>
+			<ContactForm />
 		</MuiThemeProvider>
 	);
 };

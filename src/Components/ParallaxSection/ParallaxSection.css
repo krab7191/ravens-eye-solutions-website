@@ -16,13 +16,12 @@ div.parallax-container {
 h2.parallax-text {
 	padding-top: 85px;
 	padding-bottom: 20px;
-	font-size: calc(10px + 6vw);
+	font-size: calc(10px + 5vw);
 }
 
 h3.parallax-text {
 	margin: 20px 0;
-	/* padding: 20px; */
-	font-size: calc(10px + 4vw);
+	font-size: calc(10px + 3vw);
 }
 
 @media only screen and (max-width: 560px) {

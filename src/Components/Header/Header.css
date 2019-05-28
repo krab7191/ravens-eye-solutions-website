@@ -6,14 +6,21 @@ img.logo {
 }
 
 header h5.brand {
-	font-size: calc(10px + 6vw);
+	font-size: calc(10px + 3vw);
+	font-family: 'Homemade Apple';
 }
 
 /* Keep brand fixed after going above 640 px */
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
 	header h5.brand {
-		font-size: 3rem;
+		font-size: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	header h5.brand {
+		font-size: calc(10px + 2.5vw);
 	}
 }
 
@@ -40,7 +47,7 @@ button.navigation-link {
 
 @media only screen and (max-width: 370px) {
 	header h5.brand {
-		font-size: calc(10px + 3.9vw);
+		font-size: calc(10px + 2vw);
 	}
 }
 

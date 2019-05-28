@@ -34,17 +34,19 @@ class ParallaxSection extends Component {
 					<Typography
 						variant="h2"
 						align="center"
-						color="default"
+						color="textPrimary"
 						className="parallax-text">
 						We See the Future of Your Business
           	</Typography>
-					<Button variant="contained" color="primary" className={classes.button}>
-						GET IN TOUCH
-					</Button>
+					<a href="#get-in-touch">
+						<Button variant="contained" color="primary" className={classes.button}>
+							GET IN TOUCH
+						</Button>
+					</a>
 					<Typography
 						variant="h3"
 						align="center"
-						color="default"
+						color="textPrimary"
 						className="parallax-text">
 						Avoid the Confusion of the Technology World while Receiving High-End Products for Your Business.
           	</Typography>
