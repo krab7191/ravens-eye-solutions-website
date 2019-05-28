@@ -6,6 +6,7 @@ import React from 'react';
 // Material UI imports
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 
 // Style imports
@@ -40,6 +41,9 @@ const ContactForm = () => {
 			netlify="true"
 			data-netlify="true"
 			id='contact-form'
+			name="contact-form" 
+			method="POST"
+			action="/success.html"
 		>
 			<TextField
 				required
@@ -61,14 +65,14 @@ const ContactForm = () => {
 				variant="outlined"
 				autoComplete="email"
 			/>
-			<TextField
+			<Input
 				required
 				id="outlined-required"
-				label="How can we help you?"
-				defaultValue=""
+				placeholder="How can we help you?"
 				className={classes.textField}
-				margin="normal"
+				margin="dense"
 				variant="outlined"
+				multiline={true}
 			/>
 			<Button variant="contained" className={classes.button} type="submit">
 				Send
