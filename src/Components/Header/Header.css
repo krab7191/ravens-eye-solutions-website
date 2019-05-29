@@ -54,3 +54,7 @@ button.navigation-link {
 a {
 	text-decoration: none;
 }
+
+.hamburger a {
+	color: #fff;
+}
