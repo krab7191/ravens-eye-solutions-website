@@ -29,6 +29,40 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
+let n, e, m = false;
+
+const submitForm = event => {
+	if (!(n && e && m)) {
+		event.preventDefault();
+		alert('Some empty fields are required!');
+	}
+};
+
+const handleInputChange = (event, type) => {
+	const { value } = event.target;
+	const l = value.trim().length;
+	if (l > 0) {
+		switch (type) {
+		case 'n':
+			n = true;
+			break;
+		case 'e':
+			e = true;
+			break;
+		case 'm':
+			m = true;
+			break;
+		default:
+			break;
+		}
+	}
+	else {
+		if (type === 'n') n = false;
+		if (type === 'e') e = false;
+		if (type === 'em') m = false;
+	}
+};
+
 
 const ContactForm = () => {
 	const classes = useStyles();
@@ -40,6 +74,7 @@ const ContactForm = () => {
 			id='contact-form'
 			name="contact-form"
 			method="POST"
+			onSubmit={e => submitForm(e)}
 		>
 			<TextField
 				required
@@ -50,6 +85,7 @@ const ContactForm = () => {
 				variant="outlined"
 				autoComplete="name"
 				name="name"
+				onChange={e => handleInputChange(e, 'n')}
 			/>
 			<TextField
 				required
@@ -60,6 +96,8 @@ const ContactForm = () => {
 				variant="outlined"
 				autoComplete="email"
 				name="email"
+				onChange={e => handleInputChange(e, 'e')}
+
 			/>
 			<TextField
 				required
@@ -68,6 +106,8 @@ const ContactForm = () => {
 				margin="normal"
 				variant="outlined"
 				name="message"
+				onChange={e => handleInputChange(e, 'm')}
+
 			/>
 			<input type="hidden" name="form-name" value="contact-form" />
 			<Button variant="contained" className={classes.button} type="submit">
