@@ -86,7 +86,7 @@ const Landing = props => {
 				>
 					We create what you need to succeed:
 				</Typography>
-				<Grid container spacing={8} className={classes.grid}>
+				<Grid container spacing={2} className={classes.grid}>
 					{icons.map((icon, i) => (
 						<Grid item xs={12} sm={4} key={i}>
 							<Typography
