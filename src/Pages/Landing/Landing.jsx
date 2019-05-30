@@ -24,7 +24,7 @@ import { withStyles } from '@material-ui/core/styles';
 const bgImage = require('../../media/beverage-background.jpg');
 
 const techSectionInfo = [
-	['React', 'Squarespace', 'Wordpress'],
+	['React', 'Squarespace', 'Netlify'],
 	['React', 'Node.js', 'Angular'],
 	['Pouracle', 'Data Collection', 'REST APIs']
 ];
