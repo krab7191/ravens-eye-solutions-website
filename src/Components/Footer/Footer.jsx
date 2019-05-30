@@ -27,7 +27,7 @@ const Footer = props => {
 				align="center"
 				color="textPrimary"
 			>
-				Copyright &copy; Raven's Eye Solutions 2019
+				Raven's Eye Solutions &copy; 2019
           	</Typography>
 		</div>
 	);
