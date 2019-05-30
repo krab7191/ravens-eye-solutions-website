@@ -9,6 +9,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Prevent ugly default autofill form background colors */
+
+@keyframes autofill {
+  to {
+    color: #fff;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
