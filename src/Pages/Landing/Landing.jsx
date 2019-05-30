@@ -9,6 +9,7 @@ import Header from '../../Components/Header';
 import ParallaxSection from '../../Components/ParallaxSection';
 import SlantedTextSection from '../../Components/SlantedTextSection';
 import ContactForm from '../../Components/ContactForm';
+import Footer from '../../Components/Footer';
 
 // Page theming
 import themes from '../../themes';
@@ -141,6 +142,7 @@ const Landing = props => {
 				</Typography>
 			</SlantedTextSection>
 			<ContactForm />
+			<Footer />
 		</MuiThemeProvider>
 	);
 };
