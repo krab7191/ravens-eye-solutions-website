@@ -30,7 +30,7 @@ const techSectionInfo = [
 	['Pouracle', 'Data Collection', 'REST APIs']
 ];
 const icons = ['computer', 'phone_android', 'wifi'];
-const areas = ['Websites', 'Webapps', 'Custom Solutions'];
+const areas = ['Websites', 'Web Applications', 'Custom Solutions'];
 
 const styles = theme => ({
 	sectionHead: {
@@ -42,14 +42,15 @@ const styles = theme => ({
 	},
 	textSection: {
 		margin: '0 auto',
+		paddingTop: '10px',
 		width: '90%',
 		maxWidth: '640px',
-		fontSize: '1.5rem',
+		fontSize: '1.3rem',
 		color: theme.palette.primary.contrastText
 	},
 	bold: {
 		fontWeight: 'bold',
-		fontSize: '1.6rem',
+		fontSize: '1.9rem',
 		paddingTop: '0'
 	},
 	grid: {
