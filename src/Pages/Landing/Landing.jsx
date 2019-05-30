@@ -55,7 +55,8 @@ const styles = theme => ({
 	},
 	grid: {
 		width: '100%',
-		textAlign: 'center'
+		textAlign: 'center',
+		margin: '50px 0'
 	},
 	p: {
 		margin: '0'
