@@ -5,9 +5,46 @@ img.logo {
 	border: 2px solid white;
 }
 
+img.logo:hover, header h5.brand {
+	cursor: pointer;
+}
+
 header h5.brand {
 	font-size: calc(10px + 3vw);
 	font-family: 'Homemade Apple';
+}
+
+div.header header {
+	box-shadow: 0 2px 10px 2px #011a4a;
+}
+
+button.navigation-link {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hamburger a {
+	color: #fff;
+}
+
+/* Smallest width before text collision */
+
+@media only screen and (min-width: 560px) {
+	button.hamburger {
+		display: none;
+	}
+	button.navigation-link {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 370px) {
+	header h5.brand {
+		font-size: calc(10px + 2vw);
+	}
 }
 
 /* Keep brand fixed after going above 640 px */
@@ -22,39 +59,4 @@ header h5.brand {
 	header h5.brand {
 		font-size: calc(10px + 2.5vw);
 	}
-}
-
-div.header header {
-	box-shadow: 0 2px 10px 2px #011a4a;
-}
-
-button.navigation-link {
-	display: none;
-}
-
-/* Smallest width before text collision */
-
-@media only screen and (min-width: 560px) {
-	button.hamburger {
-		display: none;
-	}
-	button.navigation-link {
-		display: block;
-	}
-}
-
-/* small screens */
-
-@media only screen and (max-width: 370px) {
-	header h5.brand {
-		font-size: calc(10px + 2vw);
-	}
-}
-
-a {
-	text-decoration: none;
-}
-
-.hamburger a {
-	color: #fff;
 }

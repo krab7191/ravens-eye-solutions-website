@@ -35,6 +35,7 @@ const styles = {
 };
 
 class Header extends Component {
+
 	state = {
 		anchorEl: null
 	};
@@ -47,6 +48,10 @@ class Header extends Component {
 		this.setState({ anchorEl: null });
 	};
 
+	navHome = () => {
+		window.location.href = "/";
+	}
+
 	render() {
 		const { classes } = this.props;
 		const { anchorEl } = this.state;
@@ -56,10 +61,10 @@ class Header extends Component {
 			<div className={`${classes.root} header`} >
 				<AppBar>
 					<Toolbar>
-						<img src="./assets/images/RES-icon-crop.png" alt="Raven's eye logo" className={`${classes.icon} logo`} />
-						<Typography variant="h5" color="textPrimary" className={`${classes.grow} brand`}>
+						<img src="./assets/images/RES-icon-crop.png" alt="Raven's eye logo" className={`${classes.icon} logo`} onClick={this.navHome} />
+						<Typography variant="h5" color="textPrimary" className={`${classes.grow} brand`} onClick={this.navHome}>
 							Raven's Eye Solutions
-          	</Typography>
+          	  </Typography>
 						<a href="#about-us">
 							<Button
 								color="default"
