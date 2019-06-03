@@ -31,13 +31,6 @@ const useStyles = makeStyles(theme => ({
 
 let n, e, m = false;
 
-const submitForm = event => {
-	if (!(n && e && m)) {
-		event.preventDefault();
-		alert('Some empty fields are required!');
-	}
-};
-
 const handleInputChange = (event, type) => {
 	const { value } = event.target;
 	const l = value.trim().length;
@@ -64,8 +57,15 @@ const handleInputChange = (event, type) => {
 };
 
 
-const ContactForm = () => {
+const ContactForm = props => {
 	const classes = useStyles();
+
+	const submitForm = event => {
+		if (!(n && e && m)) {
+			event.preventDefault();
+			props.setWarningMessage('Some empty fields are required!');
+		}
+	};
 
 	return (
 		<form

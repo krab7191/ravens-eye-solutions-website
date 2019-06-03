@@ -1,5 +1,5 @@
 // React imports
-import React from 'react';
+import React, { Component } from 'react';
 
 // Dependency imports
 import classNames from 'classnames';
@@ -10,6 +10,7 @@ import ParallaxSection from '../../Components/ParallaxSection';
 import SlantedTextSection from '../../Components/SlantedTextSection';
 import ContactForm from '../../Components/ContactForm';
 import Footer from '../../Components/Footer';
+import Modal from '../../Components/Modal';
 
 // Page theming
 import themes from '../../themes';
@@ -67,86 +68,108 @@ const styles = theme => ({
 	}
 });
 
-const Landing = props => {
-	console.log('The theme: ', themes.CoolDarkBlue);
-	const { classes } = props;
-	return (
-		<MuiThemeProvider theme={themes.CoolDarkBlue}>
-			<Header />
-			<ParallaxSection
-				height="calc(250px + 30vw)"
-				media={bgImage}
-			/>
-			<SlantedTextSection
-				slantSize='80px'
-				angle='2deg'
-				bgColor={themes.CoolDarkBlue.palette.background.default}
-			>
-				<Typography
-					className={classes.sectionHead}
-					variant='body2'
-					id="about-us"
+let TO;
+
+class Landing extends Component {
+
+	state = {
+		warningMessage: ''
+	}
+
+	setWarningMessage = text => {
+		this.setState({
+			warningMessage: text
+		});
+		const mod = document.getElementById('modal');
+		mod.style.display = 'block';
+		clearTimeout(TO);
+		TO = window.setTimeout(() => {
+			mod.style.display = 'none';
+		}, 3000);
+	}
+
+	render() {
+		console.log('The theme: ', themes.CoolDarkBlue);
+		const { classes } = this.props;
+		return (
+			<MuiThemeProvider theme={themes.CoolDarkBlue}>
+				<Header />
+				<ParallaxSection
+					height="calc(250px + 30vw)"
+					media={bgImage}
+				/>
+				<SlantedTextSection
+					slantSize='80px'
+					angle='2deg'
+					bgColor={themes.CoolDarkBlue.palette.background.default}
 				>
-					We create what you need to succeed:
-				</Typography>
-				<Grid container spacing={2} className={classes.grid}>
-					{icons.map((icon, i) => (
-						<Grid item xs={12} sm={4} key={i}>
-							<Typography
-								variant='body2'>
-								<Icon color='primary'>
-									{icon}
-								</Icon>
-							</Typography>
-							<Typography
-								className={classNames(classes.textSection, classes.bold)}
-								variant='body2'>
-								{areas[i]}
-							</Typography>
-							{techSectionInfo[i].map((t, j) => (
+					<Typography
+						className={classes.sectionHead}
+						variant='body2'
+						id="about-us"
+					>
+						We create what you need to succeed:
+					</Typography>
+					<Grid container spacing={2} className={classes.grid}>
+						{icons.map((icon, i) => (
+							<Grid item xs={12} sm={4} key={i}>
 								<Typography
-									className={classes.textSection}
-									variant='body2'
-									key={j}>
-									{t}
+									variant='body2'>
+									<Icon color='primary'>
+										{icon}
+									</Icon>
 								</Typography>
-							))}
-						</Grid>
-					))}
-				</Grid>
-			</SlantedTextSection>
-			<SlantedTextSection
-				slantSize='80px'
-				angle='2deg'
-				bgColor={themes.CoolDarkBlue.palette.background.paper}
-				className={classes.secondSlantSection}
-			>
-				<Typography
-					className={classes.sectionHead}
-					variant='body2'
-					id="get-in-touch">
-					Get In Touch
-				</Typography>
-				<Typography
-					className={classes.textSection}
-					variant='body2'>
-					1) Make an appointment
-				</Typography>
-				<Typography
-					className={classes.textSection}
-					variant='body2'>
-					2) Tell us your needs
-				</Typography>
-				<Typography
-					className={classes.textSection}
-					variant='body2'>
-					3) We will build your future together
-				</Typography>
-			</SlantedTextSection>
-			<ContactForm />
-			<Footer />
-		</MuiThemeProvider>
-	);
+								<Typography
+									className={classNames(classes.textSection, classes.bold)}
+									variant='body2'>
+									{areas[i]}
+								</Typography>
+								{techSectionInfo[i].map((t, j) => (
+									<Typography
+										className={classes.textSection}
+										variant='body2'
+										key={j}>
+										{t}
+									</Typography>
+								))}
+							</Grid>
+						))}
+					</Grid>
+				</SlantedTextSection>
+				<SlantedTextSection
+					slantSize='80px'
+					angle='2deg'
+					bgColor={themes.CoolDarkBlue.palette.background.paper}
+					className={classes.secondSlantSection}
+				>
+					<Typography
+						className={classes.sectionHead}
+						variant='body2'
+						id="get-in-touch">
+						Get In Touch
+					</Typography>
+					<Typography
+						className={classes.textSection}
+						variant='body2'>
+						1) Make an appointment
+					</Typography>
+					<Typography
+						className={classes.textSection}
+						variant='body2'>
+						2) Tell us your needs
+					</Typography>
+					<Typography
+						className={classes.textSection}
+						variant='body2'>
+						3) We will build your future together
+					</Typography>
+				</SlantedTextSection>
+				<ContactForm setWarningMessage={this.setWarningMessage} />
+				<Footer />
+				<Modal text={this.state.warningMessage} />
+			</MuiThemeProvider>
+		);
+	}
 };
 
 export default withStyles(styles)(Landing);
