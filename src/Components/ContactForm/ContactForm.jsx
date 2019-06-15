@@ -63,7 +63,7 @@ const ContactForm = props => {
 	const submitForm = event => {
 		if (!(n && e && m)) {
 			event.preventDefault();
-			props.setWarningMessage('Some empty fields are required!');
+			props.setWarningMessage('Please fill out the entire contact form before submitting!');
 		}
 	};
 
