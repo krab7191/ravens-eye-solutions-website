@@ -28,7 +28,7 @@ const bgImage = require('../../media/beverage-background.jpg');
 const techSectionInfo = [
 	['WordPress', 'Squarespace', 'Netlify', 'Hosting Management'],
 	['React', 'Node.js', 'Angular', 'Svelte.js'],
-	['Pouracle', 'Data Collection', 'REST APIs', 'Social Media Management']
+	['Pouracle', 'Data Collection', 'REST APIs', 'Social Media Management', 'Consulting']
 ];
 const icons = ['computer', 'phone_android', 'wifi'];
 const areas = ['Websites', 'Web Applications', 'Custom Solutions'];
