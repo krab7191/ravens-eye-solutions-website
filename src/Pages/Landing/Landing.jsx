@@ -26,9 +26,9 @@ import { withStyles } from '@material-ui/core/styles';
 const bgImage = require('../../media/beverage-background.jpg');
 
 const techSectionInfo = [
-	['WordPress', 'Squarespace', 'Netlify'],
-	['React', 'Node.js', 'Angular'],
-	['Pouracle', 'Data Collection', 'REST APIs']
+	['WordPress', 'Squarespace', 'Netlify', 'Hosting Management'],
+	['React', 'Node.js', 'Angular', 'Svelte.js'],
+	['Pouracle', 'Data Collection', 'REST APIs', 'Social Media Management']
 ];
 const icons = ['computer', 'phone_android', 'wifi'];
 const areas = ['Websites', 'Web Applications', 'Custom Solutions'];
