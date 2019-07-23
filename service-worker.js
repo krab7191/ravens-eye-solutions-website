@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/krab7191/ravens-eye-solutions-website/precache-manifest.b0a188882a2d7bb87fe00af2f76c2221.js"
+  "/krab7191/ravens-eye-solutions-website/precache-manifest.34ed8e76d033b13abfd169fc60299b7e.js"
 );
 
 self.addEventListener('message', (event) => {
